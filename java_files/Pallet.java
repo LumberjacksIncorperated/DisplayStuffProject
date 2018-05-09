@@ -62,8 +62,20 @@ public class Pallet extends BaseObject {
 		}
 
 		private void printUserInteractionMessage() {
-			System.out.println("*** Enter A Colour Choice ***");
-			System.out.println("(Red, Green, Blue)");
+			clearTerminalScreen();
+			System.out.println("**********************************************************************");
+			System.out.println("********************** Enter A Colour Choice *************************");
+			System.out.println("**********************************************************************");
+			System.out.println("");
+			System.out.println("		       Current Colour: "+this.currentColourChoice.asString());
+			System.out.println("");
+			System.out.println("                    Choices - (Red, Green, Blue)\n");
+			System.out.print("                        Your choice: ");
+		}
+
+		private void clearTerminalScreen() {
+			System.out.print("\033[H\033[2J");  
+    		System.out.flush();
 		}
 
 		private String getUserColourRequest() {

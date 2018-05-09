@@ -81,6 +81,20 @@ public class Colour extends BaseObject {
 		return colourChoice;
 	}
 
+	public String asString() {
+		if(this.color.equals(Color.red)) {
+			return "red";
+		} else 
+		if(this.color.equals(Color.green)) {
+			return "green";
+		} else
+		if(this.color.equals(Color.blue)) {
+			return "blue";
+		} else {
+			return "<none>";
+		}
+	}
+		
     //-----------------------------------------------------------------------------------------------------------------------
     // TESTING CODE
     //-----------------------------------------------------------------------------------------------------------------------
