@@ -31,7 +31,7 @@ main()
 function runTest()
 {
     cd ../class_files/
-    java chain_testing.ChainTestingTest
+    java Application
 }
 
 #----------------------------------------------------------------------------------------------------------------------

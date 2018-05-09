@@ -36,7 +36,7 @@ public class PaintingWindow extends BaseObject implements CanvasActionListener {
 		setupFrameForWindowWithPanel(this.thisWindowsDisplayPanel);
 	}
 
-	private MouseAdapter setupMouseAdapterToSendEventsToWindowActionListener() {
+	private void setupMouseAdapterToSendEventsToWindowActionListener() {
 		MouseAdapter newMouseAdapter = new MouseAdapter() {
      		@Override
      		public void mouseDragged(MouseEvent mouseEvent) {

@@ -41,16 +41,22 @@ function enterCompilationStartingDirectory()
 
 function compileJavaFiles()
 {
-	javac chain_testing/BaseObject.java
-	javac chain_testing/Monitor.java
-	javac chain_testing/MonitorAssistant.java
-	javac chain_testing/MonitorAssistantDelegate.java
-	javac chain_testing/ObjectDescription.java
-	javac chain_testing/ChainTestingTest.java
+    compileChainTestingSubdirectory
+	javac *.java
+}
+
+function compileChainTestingSubdirectory() {
+    javac chain_testing/BaseObject.java
+    javac chain_testing/Monitor.java
+    javac chain_testing/MonitorAssistant.java
+    javac chain_testing/MonitorAssistantDelegate.java
+    javac chain_testing/ObjectDescription.java
+    javac chain_testing/ChainTestingTest.java   
 }
 
 function moveClassFilesInClassFilesDirectory()
 {
+    mv ./*.class ../class_files/
 	mkdir ../class_files/chain_testing
 	mv ./chain_testing/*.class ../class_files/chain_testing/
 }
