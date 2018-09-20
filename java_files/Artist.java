@@ -24,14 +24,14 @@ public class Artist extends BaseObject {
 	private Canvas canvas;
 	private WindowActionListener windowActionListener; 
 
+	public static Artist wakeUpSomeRandomBumOnTheStreet() {
+		return new Artist();
+	}
+	
 	private Artist() {
 		this.pallet = Pallet.startReceivingUserActionsOnNewPallet();
 		this.canvas = Canvas.newBlankCanvas(); // This default canvas is not connected to anything
 		this.windowActionListener = createWindowActionListenerForThisArtist();
-	}
-
-	public static Artist wakeUpSomeRandomBumOnTheStreet() {
-		return new Artist();
 	}
 
 		private WindowActionListener createWindowActionListenerForThisArtist() {
